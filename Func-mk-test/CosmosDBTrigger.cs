@@ -27,7 +27,7 @@ namespace Func_mk_test
                     var test = MapperWrapper.Mapper.Map<FirelyProvider>(input[0]);
                     test.ProfileId = "ModifiedId333";
 
-                    using (var client = new DocumentClient(new Uri("https://costit-dev-eastus.documents.azure.com:443/"), "H06bx6QkHYHbxegX4W66vdszm5nashmSCzSOJxmhcYlomolo9fTSXiqfRLsplqKkmgYpe0Z9WWF26G3yJlNaSQ=="))
+                    using (var client = new DocumentClient(new Uri(""), ""))
                     {
                         var collectionLink = UriFactory.CreateDocumentCollectionUri("SampleDB", "Persons");
                         await client.UpsertDocumentAsync(collectionLink, test);
